@@ -1,9 +1,16 @@
-#Git Aliases
+# Git Aliases
 alias gs='git status'
 alias gb='git branch'
 alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 alias gp='git push --set-upstream origin HEAD'
+
+# Other Aliases
 alias la="ls -a"
+
+# Functions
+killport() {
+	lsof -nti:"$1" | xargs kill -9
+}
 
 # Show git branch name
 force_color_prompt=yes
@@ -17,3 +24,6 @@ else
 PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
 fi
 unset color_prompt force_color_prompt
+
+# Git bash completion
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
