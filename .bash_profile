@@ -7,6 +7,10 @@ alias gp='git push --set-upstream origin HEAD'
 # Other Aliases
 alias la="ls -a"
 
+# Mac Aliases
+alias sleepoff = sudo pmset -a disablesleep 1
+alias sleepon = sudo pmset -a disablesleep 0
+
 # Functions
 killport() {
 	lsof -nti:"$1" | xargs kill -9
@@ -27,3 +31,4 @@ unset color_prompt force_color_prompt
 
 # Git bash completion
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
