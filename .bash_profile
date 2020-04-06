@@ -8,8 +8,8 @@ alias gp='git push --set-upstream origin HEAD'
 alias la="ls -a"
 
 # Mac Aliases
-alias sleepoff = sudo pmset -a disablesleep 1
-alias sleepon = sudo pmset -a disablesleep 0
+alias sleepoff="sudo pmset -a disablesleep 1"
+alias sleepon="sudo pmset -a disablesleep 0"
 
 # Functions
 killport() {
